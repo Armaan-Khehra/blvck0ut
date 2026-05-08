@@ -1,0 +1,310 @@
+{
+  "ghoul": {
+    "id": "1474327381882699856",
+    "name": "h_ghoul",
+    "animated": true,
+    "full": "<a:h_ghoul:1474327381882699856>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/78325-spiffopop.gif"
+  },
+  "plaguebearer": {
+    "id": "1474339997141172274",
+    "name": "h_plaguebearer",
+    "animated": true,
+    "full": "<a:h_plaguebearer:1474339997141172274>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/34550-poison.gif"
+  },
+  "husk": {
+    "id": "1474327397577916416",
+    "name": "h_husk",
+    "animated": true,
+    "full": "<a:h_husk:1474327397577916416>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/363741-skeletonbash.gif"
+  },
+  "thrall": {
+    "id": "1474327405773586432",
+    "name": "h_thrall",
+    "animated": true,
+    "full": "<a:h_thrall:1474327405773586432>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/6576-metalslug-undead.gif"
+  },
+  "wraith": {
+    "id": "1474327411796742249",
+    "name": "h_wraith",
+    "animated": true,
+    "full": "<a:h_wraith:1474327411796742249>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/341711-ghost.gif"
+  },
+  "gravecrawler": {
+    "id": "1474327417761038489",
+    "name": "h_gravecrawler",
+    "animated": true,
+    "full": "<a:h_gravecrawler:1474327417761038489>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/97026-spiderweb.gif"
+  },
+  "nightstalker": {
+    "id": "1474327423972540477",
+    "name": "h_nightstalker",
+    "animated": true,
+    "full": "<a:h_nightstalker:1474327423972540477>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/41929-bat.gif"
+  },
+  "bonewitch": {
+    "id": "1474327429890969683",
+    "name": "h_bonewitch",
+    "animated": true,
+    "full": "<a:h_bonewitch:1474327429890969683>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/74289-witchmymelody.gif"
+  },
+  "banshee": {
+    "id": "1474327436773822547",
+    "name": "h_banshee",
+    "animated": true,
+    "full": "<a:h_banshee:1474327436773822547>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/698613-ghostcry.gif"
+  },
+  "fleshweaver": {
+    "id": "1474327442670882938",
+    "name": "h_fleshweaver",
+    "animated": true,
+    "full": "<a:h_fleshweaver:1474327442670882938>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/817164-jackenstein.gif"
+  },
+  "revenant": {
+    "id": "1474327448203034626",
+    "name": "h_revenant",
+    "animated": true,
+    "full": "<a:h_revenant:1474327448203034626>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/491410-knight.gif"
+  },
+  "shadowfiend": {
+    "id": "1474327455304126564",
+    "name": "h_shadowfiend",
+    "animated": true,
+    "full": "<a:h_shadowfiend:1474327455304126564>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/256057-shadowboum.gif"
+  },
+  "nosferatu": {
+    "id": "1474327462811930625",
+    "name": "h_nosferatu",
+    "animated": true,
+    "full": "<a:h_nosferatu:1474327462811930625>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/137055-vamp.gif"
+  },
+  "deathknight": {
+    "id": "1474327469744979980",
+    "name": "h_deathknight",
+    "animated": true,
+    "full": "<a:h_deathknight:1474327469744979980>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/399378-neonwarrior.gif"
+  },
+  "abomination": {
+    "id": "1474327475914936342",
+    "name": "h_abomination",
+    "animated": true,
+    "full": "<a:h_abomination:1474327475914936342>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/75929-slimemonster.gif"
+  },
+  "bloodqueen": {
+    "id": "1474327483724857344",
+    "name": "h_bloodqueen",
+    "animated": true,
+    "full": "<a:h_bloodqueen:1474327483724857344>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/96383-shalltear.gif"
+  },
+  "voidreaper": {
+    "id": "1474327489735164047",
+    "name": "h_voidreaper",
+    "animated": true,
+    "full": "<a:h_voidreaper:1474327489735164047>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/263991-grimreaper.gif"
+  },
+  "r_common": {
+    "id": "1474692065316048987",
+    "name": "r_common",
+    "animated": false,
+    "full": "<:r_common:1474692065316048987>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/99049-blackdot.png"
+  },
+  "r_uncommon": {
+    "id": "1474692072014483557",
+    "name": "r_uncommon",
+    "animated": false,
+    "full": "<:r_uncommon:1474692072014483557>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/47306-greendot.png"
+  },
+  "r_rare": {
+    "id": "1474692079031681138",
+    "name": "r_rare",
+    "animated": false,
+    "full": "<:r_rare:1474692079031681138>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/32352-darkbluedot.png"
+  },
+  "r_epic": {
+    "id": "1474692086824435897",
+    "name": "r_epic",
+    "animated": false,
+    "full": "<:r_epic:1474692086824435897>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/57540-purpledot.png"
+  },
+  "r_legendary": {
+    "id": "1474692092872626217",
+    "name": "r_legendary",
+    "animated": false,
+    "full": "<:r_legendary:1474692092872626217>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/72836-goldendot.png"
+  },
+  "corpsefly": {
+    "id": "1475116822717268003",
+    "name": "h_corpsefly",
+    "animated": true,
+    "full": "<a:h_corpsefly:1475116822717268003>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/278845-cornershaking.gif"
+  },
+  "rotling": {
+    "id": "1475116828786425907",
+    "name": "h_rotling",
+    "animated": true,
+    "full": "<a:h_rotling:1475116828786425907>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/48238-mushroombounce.gif"
+  },
+  "ashwalker": {
+    "id": "1475116834918371500",
+    "name": "h_ashwalker",
+    "animated": true,
+    "full": "<a:h_ashwalker:1475116834918371500>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/2144-fire.gif"
+  },
+  "bonerat": {
+    "id": "1475116840962494630",
+    "name": "h_bonerat",
+    "animated": true,
+    "full": "<a:h_bonerat:1475116840962494630>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/8061-ratjam.gif"
+  },
+  "cryptmaw": {
+    "id": "1475116847081848966",
+    "name": "h_cryptmaw",
+    "animated": true,
+    "full": "<a:h_cryptmaw:1475116847081848966>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/605250-skull.gif"
+  },
+  "hollowborn": {
+    "id": "1475116853880950784",
+    "name": "h_hollowborn",
+    "animated": true,
+    "full": "<a:h_hollowborn:1475116853880950784>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/81502-ghost.gif"
+  },
+  "skinwearer": {
+    "id": "1475116859958366240",
+    "name": "h_skinwearer",
+    "animated": true,
+    "full": "<a:h_skinwearer:1475116859958366240>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/678398-thering.gif"
+  },
+  "marrowfiend": {
+    "id": "1475116867038351461",
+    "name": "h_marrowfiend",
+    "animated": true,
+    "full": "<a:h_marrowfiend:1475116867038351461>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/75702-flashingskull.gif"
+  },
+  "soulleech": {
+    "id": "1475116873354973244",
+    "name": "h_soulleech",
+    "animated": true,
+    "full": "<a:h_soulleech:1475116873354973244>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/32528-potion.gif"
+  },
+  "tombguard": {
+    "id": "1475116880078573660",
+    "name": "h_tombguard",
+    "animated": true,
+    "full": "<a:h_tombguard:1475116880078573660>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/172501-deusvultyes.gif"
+  },
+  "duskwolf": {
+    "id": "1475116887699357869",
+    "name": "h_duskwolf",
+    "animated": true,
+    "full": "<a:h_duskwolf:1475116887699357869>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/6653-wolfdance.gif"
+  },
+  "mirefang": {
+    "id": "1475116893793943715",
+    "name": "h_mirefang",
+    "animated": true,
+    "full": "<a:h_mirefang:1475116893793943715>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/25102-sneakysnake.gif"
+  },
+  "plaguedoctor": {
+    "id": "1475116899829289133",
+    "name": "h_plaguedoctor",
+    "animated": true,
+    "full": "<a:h_plaguedoctor:1475116899829289133>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/71858-brew.gif"
+  },
+  "nighthag": {
+    "id": "1475116905974075422",
+    "name": "h_nighthag",
+    "animated": true,
+    "full": "<a:h_nighthag:1475116905974075422>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/909230-jackensteindanceparent.gif"
+  },
+  "cryptwyrm": {
+    "id": "1475116911741239429",
+    "name": "h_cryptwyrm",
+    "animated": true,
+    "full": "<a:h_cryptwyrm:1475116911741239429>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/56677-firebreathingdragon.gif"
+  },
+  "dreadweaver": {
+    "id": "1475116918078705735",
+    "name": "h_dreadweaver",
+    "animated": true,
+    "full": "<a:h_dreadweaver:1475116918078705735>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/19490-spiderweb.gif"
+  },
+  "grimreaver": {
+    "id": "1475116924383002747",
+    "name": "h_grimreaver",
+    "animated": true,
+    "full": "<a:h_grimreaver:1475116924383002747>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/387466-flamingfiresword.gif"
+  },
+  "soulforger": {
+    "id": "1475116930611417149",
+    "name": "h_soulforger",
+    "animated": true,
+    "full": "<a:h_soulforger:1475116930611417149>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/8903-rainbow-flames-skull.gif"
+  },
+  "lichpriest": {
+    "id": "1475116937037090837",
+    "name": "h_lichpriest",
+    "animated": true,
+    "full": "<a:h_lichpriest:1475116937037090837>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/20409-magicbook.gif"
+  },
+  "archlich": {
+    "id": "1475116943639056464",
+    "name": "h_archlich",
+    "animated": true,
+    "full": "<a:h_archlich:1475116943639056464>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/319907-skullglowingeyes.gif"
+  },
+  "demonlord": {
+    "id": "1475116949745963038",
+    "name": "h_demonlord",
+    "animated": true,
+    "full": "<a:h_demonlord:1475116949745963038>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/66464-felizao.gif"
+  },
+  "eternalwarden": {
+    "id": "1475116955580108881",
+    "name": "h_eternalwarden",
+    "animated": true,
+    "full": "<a:h_eternalwarden:1475116955580108881>",
+    "sourceUrl": "https://cdn3.emoji.gg/emojis/20756-irongolem.gif"
+  }
+}
