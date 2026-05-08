@@ -1,47 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="blvck0ut">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 420" role="img" aria-label="blvck0ut">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#0a0a12"/>
-      <stop offset="50%" stop-color="#15050d"/>
-      <stop offset="100%" stop-color="#0a0a12"/>
+      <stop offset="0%" stop-color="#08080d"/>
+      <stop offset="40%" stop-color="#160710"/>
+      <stop offset="100%" stop-color="#05050a"/>
     </linearGradient>
+
     <linearGradient id="blood" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0%" stop-color="#b71c1c"/>
+      <stop offset="0%" stop-color="#6a1b9a"/>
       <stop offset="50%" stop-color="#c2185b"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="100%" stop-color="#b71c1c"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#c2185b" stop-opacity="0.35"/>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#c2185b" stop-opacity="0.40"/>
+      <stop offset="60%" stop-color="#6a1b9a" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#0a0a12" stop-opacity="0"/>
     </radialGradient>
+
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbe9e9" stop-opacity="0.95"/>
+      <stop offset="80%" stop-color="#fbe9e9" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fbe9e9" stop-opacity="0"/>
+    </radialGradient>
+
     <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8"/>
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0
+                             0 0 0 0 0
+                             0 0 0 0 0
+                             0 0 0 0.05 0"/>
     </filter>
   </defs>
 
-  <rect width="1200" height="320" fill="url(#bg)"/>
-  <ellipse cx="600" cy="160" rx="520" ry="200" fill="url(#glow)"/>
+  <!-- background + glow -->
+  <rect width="1400" height="420" fill="url(#bg)"/>
+  <ellipse cx="700" cy="220" rx="640" ry="260" fill="url(#glow)"/>
 
-  <!-- decorative drips -->
-  <g opacity="0.5" fill="#b71c1c">
-    <path d="M0,0 L40,0 L36,90 Q34,110 30,118 Q26,110 24,90 Z"/>
-    <path d="M120,0 L150,0 L146,60 Q144,76 140,82 Q136,76 134,60 Z"/>
-    <path d="M1080,0 L1112,0 L1108,72 Q1106,90 1102,96 Q1098,90 1096,72 Z"/>
-    <path d="M1170,0 L1200,0 L1196,38 Q1194,50 1190,56 Q1186,50 1184,38 Z"/>
+  <!-- distant moon -->
+  <circle cx="180" cy="120" r="44" fill="url(#moon)" opacity="0.7"/>
+  <circle cx="180" cy="120" r="44" fill="none" stroke="#fbe9e9" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- distant stars -->
+  <g fill="#fbe9e9" opacity="0.5">
+    <circle cx="240" cy="60"  r="1.2"/>
+    <circle cx="320" cy="92"  r="0.9"/>
+    <circle cx="430" cy="40"  r="1.1"/>
+    <circle cx="540" cy="70"  r="0.8"/>
+    <circle cx="900" cy="48"  r="1.2"/>
+    <circle cx="1010" cy="100" r="0.9"/>
+    <circle cx="1120" cy="58" r="1.0"/>
+    <circle cx="1240" cy="84" r="0.8"/>
   </g>
 
-  <!-- bottom accent -->
-  <rect x="0" y="300" width="1200" height="6" fill="url(#blood)"/>
+  <!-- decorative drips, top edge -->
+  <g opacity="0.6" fill="#b71c1c">
+    <path d="M40,0 L78,0 L74,108 Q72,128 68,136 Q64,128 62,108 Z"/>
+    <path d="M150,0 L182,0 L178,68 Q176,84 172,90 Q168,84 166,68 Z"/>
+    <path d="M310,0 L334,0 L331,46 Q329,58 326,62 Q323,58 322,46 Z"/>
+    <path d="M1080,0 L1114,0 L1110,90 Q1108,108 1104,114 Q1100,108 1098,90 Z"/>
+    <path d="M1230,0 L1260,0 L1256,52 Q1254,66 1250,72 Q1246,66 1244,52 Z"/>
+    <path d="M1340,0 L1370,0 L1366,38 Q1364,50 1360,56 Q1356,50 1354,38 Z"/>
+  </g>
+
+  <!-- crossed daggers (subtle, behind text) -->
+  <g stroke="#c2185b" stroke-width="2" opacity="0.18" stroke-linecap="round">
+    <line x1="540" y1="200" x2="860" y2="240"/>
+    <line x1="540" y1="240" x2="860" y2="200"/>
+  </g>
+
+  <!-- bottom blood seam -->
+  <rect x="0" y="396" width="1400" height="6" fill="url(#blood)"/>
+  <rect x="0" y="404" width="1400" height="2" fill="url(#blood)" opacity="0.5"/>
+
+  <!-- corner ornaments -->
+  <g stroke="#c2185b" stroke-width="1.6" fill="none" opacity="0.55">
+    <path d="M30,30 L30,72 M30,30 L72,30"/>
+    <path d="M1370,30 L1370,72 M1370,30 L1328,30"/>
+    <path d="M30,388 L30,346 M30,388 L72,388"/>
+    <path d="M1370,388 L1370,346 M1370,388 L1328,388"/>
+  </g>
 
   <!-- wordmark -->
   <g font-family="'Cinzel','Trajan Pro','Georgia',serif" text-anchor="middle">
-    <text x="600" y="170" font-size="120" font-weight="700" fill="#f5f5f5" letter-spacing="14" filter="url(#soft)" opacity="0.4">blvck0ut</text>
-    <text x="600" y="170" font-size="120" font-weight="700" fill="#f5f5f5" letter-spacing="14">blvck0ut</text>
+    <!-- glow layer -->
+    <text x="700" y="225" font-size="148" font-weight="700"
+          fill="#c2185b" letter-spacing="18" filter="url(#soft)" opacity="0.55">blvck0ut</text>
+    <!-- main wordmark -->
+    <text x="700" y="225" font-size="148" font-weight="700"
+          fill="#f5f5f5" letter-spacing="18">blvck0ut</text>
 
-    <!-- tagline -->
-    <text x="600" y="220" font-size="22" fill="#c2185b" letter-spacing="10">⚔  THE  POWER  YOU  SEEK  ⚔</text>
+    <!-- tagline divider sweep + tagline -->
+    <text x="700" y="282" font-size="22" fill="#c2185b" letter-spacing="14"
+          font-weight="500">⚔  THE  POWER  YOU  SEEK  ⚔</text>
 
     <!-- subtagline -->
-    <text x="600" y="262" font-size="16" fill="#9e9e9e" letter-spacing="3">a goth-themed Discord bot · souls economy · vampire hunt · moderation · music</text>
+    <text x="700" y="328" font-size="15" fill="#9e9e9e" letter-spacing="5"
+          font-style="italic">a goth-themed Discord bot · souls economy · vampire hunt · moderation · music</text>
+
+    <!-- credits-style tag -->
+    <text x="700" y="368" font-size="12" fill="#5a5a5a" letter-spacing="6">
+      DISCORD.JS  ·  NODE  ·  SQLITE  ·  100+ SLASH COMMANDS
+    </text>
   </g>
+
+  <!-- subtle film grain -->
+  <rect width="1400" height="420" filter="url(#grain)" opacity="0.6"/>
 </svg>

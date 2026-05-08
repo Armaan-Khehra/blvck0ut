@@ -1,0 +1,40 @@
+name: 🦇 Feature request
+description: Suggest a new command, system, or enhancement
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell me what you'd like to see. Concise pitches > giant walls of text.
+  - type: textarea
+    id: pitch
+    attributes:
+      label: What would you like added?
+      description: One or two sentences.
+      placeholder: e.g. A `/profile` command that shows souls + level + hunt collection in one embed.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why?
+      description: What problem does it solve, or what does it unlock for your server?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Optional — other ways you've thought about solving this.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - New slash command
+        - Tweak to existing command
+        - New system / feature area
+        - Performance / infra
+        - Aesthetic / theme tweak
+        - Other

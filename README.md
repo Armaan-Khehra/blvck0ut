@@ -2,17 +2,31 @@
 
 <img src="./.github/banner.svg" alt="blvck0ut" width="100%" />
 
-# blvck0ut
+<br />
 
 **A goth-themed Discord bot that lurks in the shadows.**
 
 *Souls economy · vampire hunting · moderation · music · leveling · TTS — all wrapped in animated, blood-stained embeds.*
 
-[![discord.js](https://img.shields.io/badge/discord.js-14-5865F2?logo=discord&logoColor=white)](https://discord.js.org/)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
-[![SQLite](https://img.shields.io/badge/SQLite-better--sqlite3-003B57?logo=sqlite&logoColor=white)](https://github.com/WiseLibs/better-sqlite3)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blood.svg?color=b71c1c)](./LICENSE)
-[![Slash commands](https://img.shields.io/badge/commands-100%2B-c2185b)]()
+<br />
+
+[![discord.js](https://img.shields.io/badge/discord.js-v14-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.js.org/)
+[![Node.js](https://img.shields.io/badge/node-%E2%89%A518-1a1a1a?style=for-the-badge&logo=node.js&logoColor=68a063)](https://nodejs.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-better--sqlite3-1a1a1a?style=for-the-badge&logo=sqlite&logoColor=4db6e0)](https://github.com/WiseLibs/better-sqlite3)
+[![Slash commands](https://img.shields.io/badge/commands-100%2B-c2185b?style=for-the-badge)]()
+[![License: MIT](https://img.shields.io/badge/license-MIT-b71c1c?style=for-the-badge)](./LICENSE)
+
+<br />
+
+[![Stars](https://img.shields.io/github/stars/Armaan-Khehra/blvck0ut?style=flat&logo=github&color=c2185b&labelColor=1a1a1a)](https://github.com/Armaan-Khehra/blvck0ut/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/Armaan-Khehra/blvck0ut?style=flat&color=6a1b9a&labelColor=1a1a1a)](https://github.com/Armaan-Khehra/blvck0ut/commits/main)
+[![Code size](https://img.shields.io/github/languages/code-size/Armaan-Khehra/blvck0ut?style=flat&color=4a148c&labelColor=1a1a1a)](https://github.com/Armaan-Khehra/blvck0ut)
+
+<sub>
+
+**[Highlights](#highlights)** · **[Demo](#demo)** · **[Architecture](#architecture)** · **[Commands](#commands-at-a-glance)** · **[Getting started](#getting-started)** · **[Permissions](#required-bot-permissions--intents)** · **[Roadmap](#roadmap)**
+
+</sub>
 
 </div>
 
@@ -41,6 +55,26 @@
 
 ---
 
+## Demo
+
+A sample of what `/balance` looks like in chat — every reply is a rich embed themed with animated server emojis, a contextual GIF thumbnail and a goth color palette:
+
+```
+╭─ 🖤 Soul Ledger ────────────────────────────────╮
+│  Ari's treasury                                │
+│                                                │
+│  🗡 Wallet           ⚰ Bank          💎 Net   │
+│   12,450             8,000          20,450   │
+│                                                │
+│  🔥 Lifetime                                   │
+│  Earned: 47,310   Spent: 26,860               │
+│                                                │
+│            ⚔ blvck0ut · the power you seek   │
+╰────────────────────────────────────────────────╯
+```
+
+Real screenshots will go in [`.github/screenshots/`](./.github/screenshots/) once they're captured.
+
 <!--
 ## Screenshots
 
@@ -56,6 +90,33 @@
 
 ---
 -->
+
+---
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Discord[("Discord<br/>Gateway")] -- events --> Client["discord.js Client<br/>+ Player"]
+    Client --> Handlers["handlers/<br/>command + event loaders"]
+    Handlers --> Commands["commands/<br/>economy · hunting · mod · music · …"]
+    Handlers --> Events["events/<br/>messageCreate · guildMember · …"]
+    Commands --> Utils["utils/<br/>economy · hunting · leveling · theme"]
+    Events --> Utils
+    Utils --> DB[("better-sqlite3<br/>data/blvck0ut.sqlite")]
+    Commands --> Embeds["rich embeds<br/>+ canvas cards"]
+    Events --> Embeds
+    Embeds --> Discord
+
+    classDef dark fill:#0d0d12,stroke:#c2185b,stroke-width:1px,color:#f5f5f5;
+    classDef accent fill:#15050d,stroke:#6a1b9a,stroke-width:1px,color:#f5f5f5;
+    class Client,Handlers,Commands,Events,Utils,Embeds dark;
+    class Discord,DB accent;
+```
+
+Every command file exports a `data` (slash command builder) and an `execute` function. The handlers in `src/handlers/` recursively walk `src/commands/` on boot, register everything with `client.commands`, and `events/interactionCreate.js` dispatches incoming interactions. State persists through helpers in `src/utils/` — never raw SQL in command files.
+
+---
 
 
 ## Commands at a glance
@@ -244,15 +305,24 @@ The included script rsyncs the project, installs deps, registers commands and re
 
 ## Required bot permissions & intents
 
-Privileged intents to enable in the Developer Portal:
+### Privileged intents
 
-- `SERVER MEMBERS INTENT`
-- `MESSAGE CONTENT INTENT`
-- `PRESENCE INTENT`
+Enable these three in the Developer Portal under **Bot → Privileged Gateway Intents**:
 
-Recommended permissions when inviting:
+| Intent | Why it's needed |
+| --- | --- |
+| `SERVER MEMBERS INTENT` | Welcome / goodbye / autoroles, leveling, recent-joins tracker |
+| `MESSAGE CONTENT INTENT` | Automod word filter, profanity fines, AFK message hooks, snipe |
+| `PRESENCE INTENT` | Server stats embed and `/serverstats` |
 
-`Manage Roles` · `Manage Channels` · `Kick Members` · `Ban Members` · `Manage Messages` · `Read Message History` · `Connect` · `Speak` · `Use Voice Activity` · `Add Reactions` · `Use External Emojis` · `Embed Links` · `Attach Files` · `Use Slash Commands`
+### Recommended permissions when inviting
+
+| Group | Permissions |
+| --- | --- |
+| **Moderation** | `Manage Roles` · `Manage Channels` · `Kick Members` · `Ban Members` · `Manage Messages` |
+| **Voice / music** | `Connect` · `Speak` · `Use Voice Activity` |
+| **Embeds & UX** | `Read Message History` · `Embed Links` · `Attach Files` · `Add Reactions` · `Use External Emojis` |
+| **Slash commands** | `Use Slash Commands` |
 
 ---
 
@@ -276,7 +346,7 @@ Recommended permissions when inviting:
 
 ## Contributing
 
-This started as a personal project for one community, but PRs that fit the goth aesthetic are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md).
+This started as a personal project for one community, but PRs that fit the goth aesthetic are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) · report bugs via the [issue templates](./.github/ISSUE_TEMPLATE) · responsible disclosure in [SECURITY.md](./SECURITY.md).
 
 ## License
 
@@ -285,5 +355,19 @@ This started as a personal project for one community, but PRs that fit the goth 
 ---
 
 <div align="center">
-<sub>Built by <b>Ari</b> — a 19-year-old CS student who would rather be writing Discord bots.</sub>
+
+<sub>
+
+⚔  Built by <b><a href="https://github.com/Armaan-Khehra">Ari</a></b>  ⚔  19 · CS foundation year · would rather be writing Discord bots
+
+</sub>
+
+<br />
+
+<sub>
+
+If this is useful, ⭐ the repo · [open an issue](https://github.com/Armaan-Khehra/blvck0ut/issues/new/choose) · [start a discussion](https://github.com/Armaan-Khehra/blvck0ut/discussions)
+
+</sub>
+
 </div>

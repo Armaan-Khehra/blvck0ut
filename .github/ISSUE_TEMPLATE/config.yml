@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Question / setup help
+    url: https://github.com/Armaan-Khehra/blvck0ut/discussions
+    about: For questions about running blvck0ut on your own server, please open a discussion instead of an issue.
