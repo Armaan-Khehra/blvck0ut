@@ -193,7 +193,7 @@ index.js             # Bot entrypoint
 ### Install
 
 ```bash
-git clone https://github.com/<your-username>/blvck0ut.git
+git clone https://github.com/Armaan-Khehra/blvck0ut.git
 cd blvck0ut
 npm install
 ```
