@@ -41,6 +41,7 @@
 
 ---
 
+<!--
 ## Screenshots
 
 > Drop your demo media into `.github/screenshots/` and the previews below will fill in automatically.
@@ -54,6 +55,8 @@
 | ![welcome](./.github/screenshots/welcome.png) | ![queue](./.github/screenshots/queue.png) | ![tarot](./.github/screenshots/tarot.png) |
 
 ---
+-->
+
 
 ## Commands at a glance
 
