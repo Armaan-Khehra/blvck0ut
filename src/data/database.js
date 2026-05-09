@@ -262,6 +262,9 @@ safeAddColumn('hunt_profile', 'last_battle', 'TEXT');
 // ─── Giveaway rig column (JSON array of user IDs) ───
 safeAddColumn('giveaways', 'forced_winners', 'TEXT');
 
+// ─── Welcome ping toggle (per-guild kill switch) ───
+safeAddColumn('guild_config', 'welcome_ping_enabled', 'INTEGER DEFAULT 1');
+
 // ─── Booster custom colors ───
 db.exec(`
     CREATE TABLE IF NOT EXISTS boost_colors (

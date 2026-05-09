@@ -212,6 +212,7 @@ YouTube audio streams Opus directly via `yt-dlp -f bestaudio[acodec=opus]`, fall
 | Command | What it does |
 | --- | --- |
 | `/setwelcome` · `/setgoodbye` · `/setautorole` | Configure join/leave embeds + autoroles |
+| `/welcomeping enable\|disable\|status` | Kill-switch for the public welcome ping (great when mass-inviting alts) |
 | `/colorpanel` · `/profilepanel` | Reaction-role panels for colors and profiles |
 | `/tts` · `/say` · `/voice` · `/ttstop` | Voice-channel TTS with selectable voices |
 | `/giveaway` | Run timed giveaways with reaction entries |

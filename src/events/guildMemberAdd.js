@@ -50,6 +50,21 @@ module.exports = {
         }
 
         // Welcome ping + message in general chat (with rejoin cooldown)
+        // Per-guild kill-switch toggled via /welcomeping enable|disable.
+        // Default (column null / no row) = enabled.
+        if (config && config.welcome_ping_enabled === 0) {
+            logger.info(`[Welcome] Skipping welcome ping for ${member.user.tag} — disabled via /welcomeping`);
+            return;
+        }
+
+        // Skip welcome pings for application bot accounts (the ones with the
+        // BOT badge). User-account alts / boost accounts won't be caught by
+        // this — use /welcomeping disable for those.
+        if (member.user.bot) {
+            logger.info(`[Welcome] Skipping welcome ping for ${member.user.tag} — bot account`);
+            return;
+        }
+
         const cooldownKey = `${member.guild.id}-${member.user.id}`;
         const lastPing = recentWelcomePings.get(cooldownKey);
         const now = Date.now();
